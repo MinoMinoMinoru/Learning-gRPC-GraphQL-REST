@@ -1,0 +1,25 @@
+### Simple GraphQL(Server.js)
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+    "query": "{ message }"
+}
+
+### QraphQL with query(Server2.js)
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+    "query": "query getSingleCourse($courseID: Int!) {course(id: $courseID) { title author description topic url } }",
+    "variables":{"courseID":1}
+}
+
+### Restify Client
+
+POST http://localhost:8080/hello
+Content-Type: application/json
+
+{
+    "name" : "hogehoge"
+}
